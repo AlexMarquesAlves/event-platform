@@ -27,7 +27,7 @@ export default function App() {
    const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERY);
 
    return (
-      <ul>
+      <ul style={{ textAlign: "center", padding: "25px" }}>
          {data?.lessons.map((lesson) => {
             return <li key={lesson.id}>{lesson.title}</li>;
          })}
