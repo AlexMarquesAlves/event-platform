@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Header, Lesson, Sidebar, Video } from "../../components";
 
 interface EventProps {
    children: ReactNode;
@@ -7,7 +8,11 @@ interface EventProps {
 export function Event({ children }: EventProps) {
    return (
       <>
-         <h1>Event</h1>
+         <Header children />
+         <Sidebar children />
+         <Video children />
+         <Lesson children />
+
          {children}
       </>
    );

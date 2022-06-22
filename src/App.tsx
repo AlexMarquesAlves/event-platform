@@ -1,12 +1,5 @@
-import { Header, Lesson, Sidebar, Video } from "./components";
+import { Event } from "./pages/Event";
 
 export default function App() {
-   return (
-      <div>
-         <Header children />
-         <Sidebar children />
-         <Video children />
-         <Lesson children />
-      </div>
-   );
+   return <Event children />;
 }
