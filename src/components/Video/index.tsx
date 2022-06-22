@@ -1,16 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface VideoProps {
-  children: ReactNode;
+   children: ReactNode;
 }
 
-function Video({ children }: VideoProps) {
-  return (
-    <>
-      <h1>Video</h1>
-      {children}
-    </>
-  );
+export function Video({ children }: VideoProps) {
+   return (
+      <>
+         <h1>Video</h1>
+         {children}
+      </>
+   );
 }
-
-export default Video;

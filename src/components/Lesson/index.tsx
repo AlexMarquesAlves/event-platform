@@ -1,16 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface LessonProps {
-  children: ReactNode;
+   children: ReactNode;
 }
 
-function Lesson({ children }: LessonProps) {
-  return (
-    <>
-      <h1>Lesson</h1>
-      {children}
-    </>
-  );
+export function Lesson({ children }: LessonProps) {
+   return (
+      <>
+         <h1>Lesson</h1>
+         {children}
+      </>
+   );
 }
-
-export default Lesson;

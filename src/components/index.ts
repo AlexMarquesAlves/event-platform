@@ -1,4 +1,4 @@
-export { default as Header } from "./Header";
-export { default as Lesson } from "./Lesson";
-export { default as Sidebar } from "./Sidebar";
-export { default as Video } from "./Video";
+export { Header } from "./Header";
+export { Lesson } from "./Lesson";
+export { Sidebar } from "./Sidebar";
+export { Video } from "./Video";
