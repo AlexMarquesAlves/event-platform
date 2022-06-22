@@ -1,7 +1,5 @@
-function App() {
-  return (
-    <h1 className="text-5xl font-bold text-violet-500">Hello Ignite Lab</h1>
-  );
-}
+import { Event } from "./pages/Event";
 
-export default App;
+export default function App() {
+   return <Event children />;
+}
