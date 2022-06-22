@@ -47,7 +47,7 @@ Status
 
 ## :dart: About
 
-<p align='center'>Projeto desenvolvido durante a semana Ignite Lab da Rocketseat</p>
+<p align='center'>Project developed during Rocketseat's Ignite Lab week</p>
 
 <!-- ## :sparkles: Features
 
