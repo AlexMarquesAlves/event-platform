@@ -25,17 +25,17 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/AlexMarquesAlves/event-platform?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center">
+<h4 align="center">
 	🚧  Event Platform 🚀 Under construction...  🚧
 </h4>
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <!-- <a href="#sparkles-features">Features</a> &#xa0; | &#xa0; -->
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -47,13 +47,13 @@
 
 ## :dart: About
 
-Describe your project
+<p align='center'>Projeto desenvolvido durante a semana Ignite Lab da Rocketseat</p>
 
-## :sparkles: Features
+<!-- ## :sparkles: Features
 
 :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Feature 3; -->
 
 ## :rocket: Technologies
 
@@ -131,4 +131,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-Feito por [otávio silva](https://otaviosilva.dev/) 🙃 -->
+Feito por []() ❤ -->
