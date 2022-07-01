@@ -1,7 +1,7 @@
 import { format, isPast } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { CheckCircle, Lock } from "phosphor-react";
-import { Link } from "react-router-dom"; // installed new dependency
+import { Link } from "react-router-dom";
 
 interface LessonProps {
    title: string;
@@ -10,10 +10,10 @@ interface LessonProps {
    type: "live" | "class";
 }
 
-export function Lesson({ title, slug, availableAt, type }: LessonProps) {
-   const isLessonAvailable = isPast(availableAt);
+export function Lesson(props: LessonProps) {
+   const isLessonAvailable = isPast(props.availableAt);
    const availableDateFormatted = format(
-      availableAt,
+      props.availableAt,
       "EEEE' • 'd' de 'MMMM' • 'k'h'mm",
       {
          locale: ptBR,
@@ -21,7 +21,7 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
    );
 
    return (
-      <Link to={`/event/lesson/${slug}`} className="group">
+      <Link to={`/event/lesson/${props.slug}`} className="group">
          <span className="text-gray-200 dark:text-gray-300">
             {availableDateFormatted}
          </span>
@@ -34,17 +34,19 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
                      Conteúdo liberado
                   </span>
                ) : (
-                  <span className="flex items-center gap-2 text-sm font-medium text-cyan-400 dark:text-orange-500">
+                  <span className="flex items-center gap-2 text-sm font-medium text-orange-400 text-cyan-400 dark:text-orange-500">
                      <Lock size={20} />
                      Em breve
                   </span>
                )}
                <span className="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold">
-                  {type === "live" ? "AO VIVO" : "AULA PRÁTICA"}
+                  {props.type === "live" ? "AO VIVO" : "AULA PRÁTICA"}
                </span>
             </header>
 
-            <strong className="block mt-5 dark:text-gray-200">{title}</strong>
+            <strong className="block mt-5 dark:text-gray-200">
+               {props.title}
+            </strong>
          </div>
       </Link>
    );

@@ -7,7 +7,6 @@ import {
    FileArrowDown,
    Lightning,
 } from "phosphor-react";
-import { ReactNode } from "react";
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
    query GetLessonBySlug($slug: String) {
@@ -23,14 +22,6 @@ const GET_LESSON_BY_SLUG_QUERY = gql`
       }
    }
 `;
-interface VideoProps {
-   children: ReactNode;
-}
-
-interface VideoProps {
-   lessonSlug: string;
-}
-
 interface GetLessonBySlugResponse {
    lesson: {
       title: string;
@@ -42,6 +33,10 @@ interface GetLessonBySlugResponse {
          name: string;
       };
    };
+}
+
+interface VideoProps {
+   lessonSlug: string;
 }
 
 export function Video(props: VideoProps) {
