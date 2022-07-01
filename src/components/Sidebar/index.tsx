@@ -1,9 +1,17 @@
 import { gql, useQuery } from "@apollo/client";
-import { ReactNode } from "react";
 import { Lesson } from "../Lesson";
-interface SidebarProps {
-   children: ReactNode;
-}
+
+const GET_LESSONS_QUERY = gql`
+   query {
+      lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
+         id
+         title
+         lessonType
+         availableAt
+         slug
+      }
+   }
+`;
 
 interface GetLessonsQueryResponse {
    lessons: {
@@ -15,24 +23,12 @@ interface GetLessonsQueryResponse {
    }[];
 }
 
-const GET_LESSONS_QUERY = gql`
-   query {
-      lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
-         id
-         lessonType
-         availableAt
-         title
-         slug
-      }
-   }
-`;
-
-export function Sidebar({ children }: SidebarProps) {
+export function Sidebar() {
    const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
 
    return (
-      <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600">
-         <span className="block pb-6 mb-6 text-2xl font-bold border-b border-gray-500">
+      <aside className="w-[348px] bg-gray-500 dark:bg-gray-700 text-gray-100 p-6 border-l dark:border-gray-600">
+         <span className="block pb-6 mb-6 text-2xl font-bold border-b border-gray-300 dark:border-gray-500">
             Cronograma de aulas
          </span>
 
@@ -49,7 +45,6 @@ export function Sidebar({ children }: SidebarProps) {
                );
             })}
          </div>
-         {children}
       </aside>
    );
 }
