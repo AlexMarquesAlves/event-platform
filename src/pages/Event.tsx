@@ -14,5 +14,3 @@ export function Event() {
       </div>
    );
 }
-
-export default Event;
