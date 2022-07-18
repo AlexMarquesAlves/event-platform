@@ -10,6 +10,19 @@ export function Subscribe() {
 
    // const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
+   async function handleSubscribe(event: FormEvent) {
+      event.preventDefault();
+
+      await createSubscriber({
+         variables: {
+            name,
+            email,
+         },
+      });
+
+      navigate("/event");
+   }
+
    return (
       <div className="flex flex-col items-center min-h-screen bg-no-repeat bg-cover bg-blur ">
          <div className="w-full max-w-[1100px] flex items-center  justify-between mt-20 mx-auto">
