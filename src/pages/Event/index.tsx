@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Header, Sidebar, Video } from "../components/";
+import { Header, Sidebar, Video } from "../../components";
 
 export function Event() {
    const { slug } = useParams<{ slug: string }>();
