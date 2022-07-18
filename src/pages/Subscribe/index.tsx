@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../../components";
+import { useCreateSubscriberMutation } from "../../graphql/generated";
 
 export function Subscribe() {
    const navigate = useNavigate();
